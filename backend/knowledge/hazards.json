@@ -1,0 +1,10 @@
+[
+  "Hydrocarbon", "Fire", "Explosion", "Electricity", "Pressure",
+  "Mechanical equipment", "Toxic atmosphere", "Working at height",
+  "Vehicle", "Suspended load", "Rotating equipment", "Chemical exposure",
+  "Stored energy", "Oxygen deficiency", "Combustible material",
+  "Moving machinery", "Falling object", "Overloaded crane",
+  "Damaged lifting equipment", "Scaffold failure", "Ladder failure",
+  "Fall", "Burn", "Asphyxiation", "Electrocution",
+  "Crush injury", "Amputation", "Struck-by", "Caught-in/between"
+]

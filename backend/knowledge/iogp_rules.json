@@ -1,0 +1,141 @@
+[
+  {
+    "id": 1,
+    "name": "Bypassing Safety Controls",
+    "description": "Never bypass or disable safety controls designed to protect people.",
+    "keywords": ["bypass", "disable", "override", "interlock", "guard", "remove", "skip", "ignore", "circumvent", "defeat", "defeated"],
+    "related_hazards": ["Mechanical equipment", "Rotating equipment", "Electrical", "Stored energy"],
+    "related_energy_sources": ["Mechanical", "Electrical", "Stored energy", "Pressure"],
+    "example_phrases": [
+      "interlock was bypassed",
+      "safety guard was removed",
+      "alarm was disabled",
+      "safety system overridden",
+      "defeated the safety interlock",
+      "removed the protective guard"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Confined Space",
+    "description": "Obtain authorisation before entering a confined space.",
+    "keywords": ["confined", "tank", "vessel", "silo", "pipe", "duct", "enclosed", "oxygen", "gas test", "ventilation", "atmosphere", "respiratory", "exhaust"],
+    "related_hazards": ["Toxic atmosphere", "Oxygen deficiency", "Flammable atmosphere"],
+    "related_energy_sources": ["Chemical", "Pneumatic", "Stored energy"],
+    "example_phrases": [
+      "entered confined space",
+      "tank entry without gas testing",
+      "oxygen deficient atmosphere",
+      "confined space rescue required",
+      "no atmospheric monitoring"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Driving",
+    "description": "Obey all driving laws and requirements.",
+    "keywords": ["driving", "vehicle", "speeding", "seatbelt", "seat belt", "fatigue", "reversing", "road", "traffic", "collision", "impact", "lane", "highway"],
+    "related_hazards": ["Vehicle", "Moving vehicle"],
+    "related_energy_sources": ["Mechanical", "Kinetic"],
+    "example_phrases": [
+      "exceeding speed limit",
+      "driver fatigue",
+      "no seatbelt worn",
+      "vehicle collision",
+      "reversing accident"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Energy Isolation",
+    "description": "Verify zero energy state before work begins.",
+    "keywords": ["isolation", "lockout", "tagout", "LOTO", "zero energy", "de-energize", "discharge", "residual", "pressure", "valve", "breaker", "energized", "energised"],
+    "related_hazards": ["Stored energy", "Pressure", "Electrical", "Hydrocarbon"],
+    "related_energy_sources": ["Electrical", "Pressure", "Mechanical", "Hydraulic", "Stored energy"],
+    "example_phrases": [
+      "without confirming isolation",
+      "LOTO not applied",
+      "residual pressure",
+      "de-energize the system",
+      "zero energy not verified",
+      "line opened before isolation",
+      "breaker not locked out"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Hot Work",
+    "description": "Obtain authorisation before starting hot work.",
+    "keywords": ["welding", "cutting", "hot work", "torch", "flame", "spark", "combustion", "fire watch", "gas test", "heat", "burning", "arc"],
+    "related_hazards": ["Fire", "Explosion", "Combustible", "Hydrocarbon"],
+    "related_energy_sources": ["Thermal", "Electrical", "Chemical"],
+    "example_phrases": [
+      "welding near hydrocarbons",
+      "cutting without gas testing",
+      "hot work without permit",
+      "sparks near combustible material",
+      "no fire watch"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Line of Fire",
+    "description": "Keep clear of line of fire hazards.",
+    "keywords": ["line of fire", "suspended", "load", "below", "path", "trajectory", "behind", "underneath", "crush", "struck", "impact", "release", "projectile"],
+    "related_hazards": ["Suspended load", "Vehicle", "Pressure release", "Rotating equipment", "Moving machinery"],
+    "related_energy_sources": ["Gravity", "Pressure", "Mechanical", "Hydraulic", "Pneumatic"],
+    "example_phrases": [
+      "worker standing nearby",
+      "below suspended load",
+      "struck by falling object",
+      "pressure release path",
+      "in the line of fire"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Safe Mechanical Lifting",
+    "description": "Use approved procedures for lifting operations.",
+    "keywords": ["crane", "lift", "sling", "hoist", "overload", "overhead", "rigging", "load", "certified", "inspection", "rigged", "hook"],
+    "related_hazards": ["Suspended load", "Overloaded crane", "Damaged sling", "Mechanical equipment"],
+    "related_energy_sources": ["Gravity", "Mechanical", "Hydraulic"],
+    "example_phrases": [
+      "overloaded crane",
+      "damaged lifting sling",
+      "worker below suspended load",
+      "rigging not inspected",
+      "lift plan not followed"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Work Authorisation",
+    "description": "Obtain proper authorisation before work begins.",
+    "keywords": ["permit", "authorisation", "authorization", "approval", "signed", "authorized", "pre-job", "toolbox", "safety briefing", "authorized work"],
+    "related_hazards": ["Unauthorized work", "Inadequate planning"],
+    "related_energy_sources": ["All"],
+    "example_phrases": [
+      "work started without permit",
+      "incorrect permit category",
+      "no safety briefing",
+      "work began before authorization",
+      "permit expired"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Working at Height",
+    "description": "Use proper fall protection when working at height.",
+    "keywords": ["height", "fall", "ladder", "scaffold", "elevated", "harness", "guardrail", "platform", "rope", "anchor", "edge", "roof", "drop", "plummet"],
+    "related_hazards": ["Falling from height", "Scaffold failure", "Ladder failure"],
+    "related_energy_sources": ["Gravity"],
+    "example_phrases": [
+      "missing fall protection",
+      "ladder misuse",
+      "scaffold not inspected",
+      "no harness worn",
+      "working at height without guardrails",
+      "fall from scaffold"
+    ]
+  }
+]

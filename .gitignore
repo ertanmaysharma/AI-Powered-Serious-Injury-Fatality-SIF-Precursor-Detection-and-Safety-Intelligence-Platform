@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel/
+
+# Build outputs
+frontend/dist/
+
+# Database (local dev)
+backend/sifguard.db
+backend/*.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vercel
+.vercel/
