@@ -6,6 +6,7 @@ pydantic==2.5.2
 psycopg[binary]==3.3.4
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
+psycopg[binary]==3.3.4
 bcrypt==4.0.1
 python-dotenv==1.0.0
 aiofiles==23.2.1
