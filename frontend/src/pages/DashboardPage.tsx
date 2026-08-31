@@ -29,14 +29,14 @@ export default function DashboardPage() {
   if (loading) return <LoadingState />;
 
   const kpis = [
-    { label: 'Total Reports', value: stats?.total_reports || 0, color: 'text-blue-400', bg: 'bg-blue-500/10', icon: '📋' },
-    { label: 'SIF-Potential Reports', value: stats?.sif_potential_reports || 0, color: 'text-amber-400', bg: 'bg-amber-500/10', icon: '⚠️' },
-    { label: 'Critical Reports', value: stats?.critical_reports || 0, color: 'text-red-400', bg: 'bg-red-500/10', icon: '🚨' },
-    { label: 'High Priority', value: stats?.high_priority_reports || 0, color: 'text-orange-400', bg: 'bg-orange-500/10', icon: '🔶' },
-    { label: 'Awaiting Review', value: stats?.awaiting_review || 0, color: 'text-yellow-400', bg: 'bg-yellow-500/10', icon: '⏳' },
-    { label: 'Reviewed Reports', value: stats?.reviewed_reports || 0, color: 'text-green-400', bg: 'bg-green-500/10', icon: '✅' },
-    { label: 'Actions Open', value: stats?.corrective_actions_open || 0, color: 'text-orange-400', bg: 'bg-orange-500/10', icon: '📂' },
-    { label: 'Actions Closed', value: stats?.corrective_actions_closed || 0, color: 'text-green-400', bg: 'bg-green-500/10', icon: '📁' },
+    { label: 'Total Reports', value: stats?.total_reports || 0, color: 'text-blue-600', bg: 'bg-blue-50' },
+    { label: 'SIF-Potential Reports', value: stats?.sif_potential_reports || 0, color: 'text-amber-600', bg: 'bg-amber-50' },
+    { label: 'Critical Reports', value: stats?.critical_reports || 0, color: 'text-red-600', bg: 'bg-red-50' },
+    { label: 'High Priority', value: stats?.high_priority_reports || 0, color: 'text-orange-600', bg: 'bg-orange-50' },
+    { label: 'Awaiting Review', value: stats?.awaiting_review || 0, color: 'text-yellow-600', bg: 'bg-yellow-50' },
+    { label: 'Reviewed Reports', value: stats?.reviewed_reports || 0, color: 'text-green-600', bg: 'bg-green-50' },
+    { label: 'Actions Open', value: stats?.corrective_actions_open || 0, color: 'text-orange-600', bg: 'bg-orange-50' },
+    { label: 'Actions Closed', value: stats?.corrective_actions_closed || 0, color: 'text-green-600', bg: 'bg-green-50' },
   ];
 
   const sifChartData = sifDist?.distribution ? Object.entries(sifDist.distribution).map(([name, value]) => ({ name, value })) : [];
@@ -46,29 +46,28 @@ export default function DashboardPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Dashboard</h1>
-          <p className="text-sm text-gray-400 mt-1">SIF-GUARD Safety Intelligence Overview</p>
+          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+          <p className="text-sm text-gray-500 mt-1">SIF-GUARD Safety Intelligence Overview</p>
         </div>
         <Link
           to="/analyze"
-          className="bg-amber-500 hover:bg-amber-600 text-gray-900 font-semibold px-4 py-2 rounded-lg text-sm"
+          className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded-lg text-sm"
         >
           + Analyze Report
         </Link>
       </div>
 
       {/* Demo data notice */}
-      <div className="bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs px-4 py-2 rounded-lg">
-        📊 SYNTHETIC DEMONSTRATION DATA — NOT ACTUAL OIL INCIDENT RECORDS
+      <div className="bg-blue-50 border border-blue-200 text-blue-700 text-xs px-4 py-2 rounded-lg">
+        SYNTHETIC DEMONSTRATION DATA — NOT ACTUAL OIL INCIDENT RECORDS
       </div>
 
       {/* KPI Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {kpis.map((kpi, i) => (
-          <div key={i} className={`${kpi.bg} border border-gray-800 rounded-xl p-4`}>
+          <div key={i} className={`${kpi.bg} border border-gray-200 rounded-xl p-4`}>
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-lg">{kpi.icon}</span>
-              <span className="text-xs text-gray-400">{kpi.label}</span>
+              <span className="text-xs text-gray-500">{kpi.label}</span>
             </div>
             <div className={`text-2xl font-bold ${kpi.color}`}>{kpi.value.toLocaleString()}</div>
           </div>
@@ -78,8 +77,8 @@ export default function DashboardPage() {
       {/* Charts Row */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* SIF Distribution */}
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-white mb-4">SIF Potential Distribution</h3>
+        <div className="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 className="text-sm font-semibold text-gray-900 mb-4">SIF Potential Distribution</h3>
           {sifChartData.length > 0 ? (
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
@@ -93,14 +92,14 @@ export default function DashboardPage() {
         </div>
 
         {/* IOGP Rules */}
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-white mb-4">IOGP Rule Distribution</h3>
+        <div className="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 className="text-sm font-semibold text-gray-900 mb-4">IOGP Rule Distribution</h3>
           {iogpChartData.length > 0 ? (
             <ResponsiveContainer width="100%" height={250}>
               <BarChart data={iogpChartData} layout="vertical">
-                <XAxis type="number" tick={{ fill: '#9ca3af', fontSize: 11 }} />
-                <YAxis dataKey="name" type="category" width={130} tick={{ fill: '#9ca3af', fontSize: 11 }} />
-                <Tooltip contentStyle={{ background: '#1f2937', border: '1px solid #374151', borderRadius: 8 }} />
+                <XAxis type="number" tick={{ fill: '#6b7280', fontSize: 11 }} />
+                <YAxis dataKey="name" type="category" width={130} tick={{ fill: '#6b7280', fontSize: 11 }} />
+                <Tooltip contentStyle={{ background: '#ffffff', border: '1px solid #e5e7eb', borderRadius: 8 }} />
                 <Bar dataKey="value" fill="#f59e0b" radius={[0, 4, 4, 0]} />
               </BarChart>
             </ResponsiveContainer>
@@ -110,19 +109,16 @@ export default function DashboardPage() {
 
       {/* Insights */}
       {insights.length > 0 && (
-        <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-          <h3 className="text-sm font-semibold text-white mb-4">🔑 Key Safety Insights</h3>
+        <div className="bg-white border border-gray-200 rounded-xl p-5">
+          <h3 className="text-sm font-semibold text-gray-900 mb-4">Key Safety Insights</h3>
           <div className="space-y-2">
             {insights.map((insight: any, i: number) => (
               <div key={i} className={`flex items-start gap-3 px-4 py-3 rounded-lg ${
-                insight.severity === 'critical' ? 'bg-red-500/10 border border-red-500/20' :
-                insight.severity === 'warning' ? 'bg-amber-500/10 border border-amber-500/20' :
-                'bg-blue-500/10 border border-blue-500/20'
+                insight.severity === 'critical' ? 'bg-red-50 border border-red-200' :
+                insight.severity === 'warning' ? 'bg-amber-50 border border-amber-200' :
+                'bg-blue-50 border border-blue-200'
               }`}>
-                <span className="text-sm mt-0.5">
-                  {insight.severity === 'critical' ? '🚨' : insight.severity === 'warning' ? '⚠️' : 'ℹ️'}
-                </span>
-                <p className="text-sm text-gray-300">{insight.message}</p>
+                <p className="text-sm text-gray-700">{insight.message}</p>
               </div>
             ))}
           </div>
@@ -136,8 +132,8 @@ function LoadingState() {
   return (
     <div className="flex items-center justify-center h-64">
       <div className="text-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-400 mx-auto mb-4"></div>
-        <p className="text-sm text-gray-400">Loading dashboard...</p>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-amber-500 mx-auto mb-4"></div>
+        <p className="text-sm text-gray-500">Loading dashboard...</p>
       </div>
     </div>
   );
@@ -145,7 +141,7 @@ function LoadingState() {
 
 function EmptyChart() {
   return (
-    <div className="h-[250px] flex items-center justify-center text-gray-500 text-sm">
+    <div className="h-[250px] flex items-center justify-center text-gray-400 text-sm">
       No data available
     </div>
   );
